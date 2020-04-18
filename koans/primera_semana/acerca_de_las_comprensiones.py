@@ -33,7 +33,7 @@ class AcercaDeLasComprensiones(Koan):
 
     def test_desempacando_tuplas_en_comprensiones_de_listas(self):
         lista_de_tuplas = [(1, 'leñador'), (2, 'inquisición'), (4, 'spam')]
-        comprehension = [ skit * number for number, skit in list_of_tuples ]
+        comprehension = [ skit * number for number, skit in lista_de_tuplas ]
 
         self.assertEqual(__, comprehension[0])
 
