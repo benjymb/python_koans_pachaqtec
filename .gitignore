@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+env
+runner_tests
+_runner_tests.py
+acerca_de_asserts_2.py
+original
+.vscode
