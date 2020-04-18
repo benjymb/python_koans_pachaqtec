@@ -1,6 +1,6 @@
 # Las lineas que empiezan con # no se cuentan
 koans.primera_semana.acerca_de___asserts.AcercaDeAsserts
-koans.primera_semana.acerca_de__none.AcercaDeNone
+koans.primera_semana.acerca_de___none.AcercaDeNone
 koans.primera_semana.acerca_de___tipos_de_variables.AcercaDeTiposDeVariables
 koans.primera_semana.acerca_de___verdad_y_falsedad.AcercaDeLaVerdadYLaFalsedad
 koans.primera_semana.acerca_de__operadores.AcercaDeOperadores
