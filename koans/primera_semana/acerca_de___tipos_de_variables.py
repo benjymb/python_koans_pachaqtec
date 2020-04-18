@@ -18,7 +18,7 @@ class AcercaDeTiposDeVariables(Koan):
         self.assertEqual(__, type(0))
         self.assertEqual(__, type(3.14))
         self.assertEqual(__, type(3.14))
-        self.assertEqual(__, type(1598632L))
+        self.assertEqual(__, type(159863))
         self.assertEqual(__, type(0xABFC))
         self.assertEqual(__, type(3j))
 
