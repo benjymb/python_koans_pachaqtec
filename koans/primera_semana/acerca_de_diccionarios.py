@@ -51,7 +51,9 @@ class AcercaDeDiccionarios(Koan):
 
     def test_usando_items_para_dict(self):
         babel_fish = { 'uno': 'one', 'dos': 'two' }
-        self.assertEqual(__, babel_fish.items())
+        # Correccion : En Python 3, items() debe ser convertido explicitamente
+        # a una lista.
+        self.assertEqual(__, list(babel_fish.items()))
 
     def test_usando_llaves_para_hacer_un_dict(self):
         cards = {}.fromkeys(('red warrior', 'green elf', 'blue valkyrie', 'yellow dwarf', 'confused looking zebra'), 42)

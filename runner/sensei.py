@@ -43,7 +43,7 @@ class Sensei(MockableTestResult):
         if self.passesCount():
             MockableTestResult.addSuccess(self, test)
             self.stream.writeln(
-                "  {0}{1}{2} has expanded your awareness.{3}{4}"
+                "  {0}{1} - Has resuelto exitosamente {2}{3}{4}"
                 .format(
                     Fore.GREEN, Style.BRIGHT, test._testMethodName,
                     Fore.RESET, Style.NORMAL
@@ -197,11 +197,11 @@ class Sensei(MockableTestResult):
         return stack_text
 
     def report_progress(self):
-        return "Has completado {0} ({2} %) koans y " \
-                "{1} (de {3}) lecciones.".format(
+        return "Has completado {0} ({1} %) koans y " \
+                "{2} (de {3}) lecciones.".format(
                     self.pass_count,
-                    self.lesson_pass_count,
                     self.pass_count * 100 // self.total_koans(),
+                    self.lesson_pass_count,
                     self.total_lessons()
                 )
 
@@ -301,11 +301,11 @@ class Sensei(MockableTestResult):
         cur_dir = os.path.split(os.path.realpath(__file__))[0]
         if not self.all_lessons:
             self.all_lessons = glob.glob(
-                '{0}/../koans/../acerca_de_*.py'.format(cur_dir)
+                '{0}/../koans/*/acerca_de_*.py'.format(cur_dir)
             )
             self.all_lessons = list(
                 filter(
-                    lambda filename: "acerca_de_temas_extra" not in filename,
+                    lambda filename: "ejercicio" not in filename,
                     self.all_lessons
                 )
             )
