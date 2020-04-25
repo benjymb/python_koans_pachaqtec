@@ -4,12 +4,13 @@
 from runner.koan import *
 
 import re # Se usa para comparar expresiones regulares.
+from pathlib import PurePath
 
 class AcercaDeLaInstruccionWith(Koan):
 
     def contar_lineas(self, nombre_archivo):
         try:
-            archivo = open(nombre_archivo)
+            archivo = open(PurePath("koans/segunda_semana", nombre_archivo))
             try:
                 return len(archivo.readlines())
             finally:
@@ -45,7 +46,7 @@ class AcercaDeLaInstruccionWith(Koan):
             self._archivo = None
 
         def __enter__(self):
-            self._archivo = open(self._nombre_archivo)
+            self._archivo = open(PurePath("koans/segunda_semana"), self._nombre_archivo)
             return self._archivo
 
         def __exit__(self, cls, value, tb):

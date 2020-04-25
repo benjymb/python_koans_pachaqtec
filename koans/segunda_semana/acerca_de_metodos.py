@@ -39,7 +39,7 @@ class AcercaDeMetodos(Koan):
     def test_descubriendo_el_nuevo_nombre_de_metodos_que_empiezan_con_doble_subguion(self):
         labrador = Perro()
         with self.assertRaises(___): 
-            password = labrador.__password()
+            password = labrador.__intensidad_de_ladrido()
 
         # Pero aun se puede acceder!
-        self.assertEqual(__, labrador._Perro__password())
+        self.assertEqual(__, labrador.__intensidad_de_ladrido())

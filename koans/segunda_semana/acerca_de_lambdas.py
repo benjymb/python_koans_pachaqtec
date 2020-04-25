@@ -3,7 +3,7 @@
 
 from runner.koan import *
 
-def pedir_orden(self, plato):
+def pedir_orden(plato):
     return lambda cantidad: f"{cantidad} {plato}"
 
 class AcercaDeLambdas(Koan):
