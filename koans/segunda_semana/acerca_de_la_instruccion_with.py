@@ -46,7 +46,7 @@ class AcercaDeLaInstruccionWith(Koan):
             self._archivo = None
 
         def __enter__(self):
-            self._archivo = open(PurePath("koans/segunda_semana"), self._nombre_archivo)
+            self._archivo = open(PurePath("koans/segunda_semana", self._nombre_archivo))
             return self._archivo
 
         def __exit__(self, cls, value, tb):
@@ -62,7 +62,7 @@ class AcercaDeLaInstruccionWith(Koan):
         self.assertEqual(__, self.contar_lineas_2("archivo_ejemplo.txt"))
 
     def contar_lineas_3(self, nombre_archivo):
-        with open(nombre_archivo) as archivo:
+        with open(PurePath("koans/segunda_semana", nombre_archivo)) as archivo:
             return len(archivo.readlines())
 
     def test_la_funcion_incluida_open_es_un_administrador_de_contexto(self):
